@@ -36,7 +36,7 @@
                     mouseup
                 </button><br><br>
 
-                <button class="btn btn-secondary mtbtn5">
+                <button class="btn btn-secondary mtbtn6">
                     mouseleave
                 </button><br><br>
 
@@ -67,14 +67,17 @@
             console.log('mousedown');
         });
 
-        $('.mtbtn5').mouseleave(function () {
+        $('.mtbtn5').mouseup(function () {
             console.log('mouseup');
         });
 
-        $('.mtbtn6').hover(function () {
+        $('.mtbtn6').mouseleave(function () {
             console.log('mouseup');
         });
 
+        $('.mtbtn7').hover(function () {
+            console.log('hover');
+        });
         
     </script>
 </body>
