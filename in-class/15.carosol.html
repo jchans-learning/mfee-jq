@@ -10,14 +10,33 @@
     <style>
         .warp {
             max-width: 800px;
+            height: 500px;
+            overflow: hidden;
+            position: relative;
         }
 
         .img-warp {
             width: 4000px;
+            position: absolute;
+            left: 0px;
+            transition: 0.5s;
         }
 
         li img {
             width: 100%;
+        }
+
+        .slider-dots {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .slider-dots li {
+            width: 40px;
+            height: 10px;
+            border: 1px solid #fff;
+            margin: 4px;
         }
     </style>
 </head>
@@ -31,6 +50,14 @@
             <li><img src="./imgs/slide3.jpg" alt=""></li>
             <li><img src="./imgs/slide4.jpg" alt=""></li>
             <li><img src="./imgs/slide5.jpg" alt=""></li>
+        </ul>
+
+        <ul class="list-unstyled slider-dots d-flex justify-content-center">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
         </ul>
     </div>
 
