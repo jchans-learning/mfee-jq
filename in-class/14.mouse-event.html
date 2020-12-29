@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mouse Event</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"> -->
 </head>
 
 <body>
@@ -16,31 +16,31 @@
             <div class="col">
                 <br><br>
 
-                <button class="btn btn-primary " id="mtbtn1">
+                <button class="btn btn-primary mtbtn1" >
                     click
                 </button><br><br>
                 
-                <button class="btn btn-info " id="mtbtn2">
+                <button class="btn btn-info mtbtn2" >
                     double click
                 </button><br><br>
 
-                <button class="btn btn-warning " id="mtbtn3">
+                <button class="btn btn-warning mtbtn3" >
                     contextmenu
                 </button><br><br>
                 
-                <button class="btn btn-danger " id="mtbtn4">
+                <button class="btn btn-danger mtbtn4" >
                     mousedown
                 </button><br><br>
 
-                <button class="btn btn-success " id="mtbtn5">
+                <button class="btn btn-success mtbtn5" >
                     mouseup
                 </button><br><br>
 
-                <button class="btn btn-secondary " id="mtbtn6">
+                <button class="btn btn-secondary mtbtn6" >
                     mouseleave
                 </button><br><br>
 
-                <button class="btn btn-primary " id="mtbtn6">
+                <button class="btn btn-primary mtbtn7" >
                     hover
                 </button><br><br>
     
@@ -51,32 +51,38 @@
     <script src="https://code.jquery.com/jquery-3.5.1.js"
         integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
     <script>
-        $('#mtbtn1').click(function () {
+        $('.mtbtn1').click(function () {
             console.log('clicked');
         });
 
-        $('#mtbtn2').dblclick(function () {
+        $('.mtbtn2').dblclick(function () {
             console.log('dbl clicked');
         });
 
-        $('#mtbtn3').contextmenu(function () {
+        $('.mtbtn3').contextmenu(function () {
             console.log('contextmenu');
         });
 
-        $('#mtbtn4').mousedown(function () {
+        $('.mtbtn4').mousedown(function () {
             console.log('mousedown');
         });
 
-        $('#mtbtn5').mouseup(function () {
+        $('.mtbtn5').mouseup(function () {
             console.log('mouseup');
         });
 
-        $('#mtbtn6').mouseleave(function () {
+        $('.mtbtn6').mouseleave(function () {
             console.log('mouseup');
         });
 
-        $('#mtbtn7').hover(function () {
-            console.log('hover');
+        // $('.mtbtn7').hover(function () {
+        //     console.log('hover');
+        // });
+
+        $('.mtbtn7').hover(function () {
+            console.log('hover in');
+        }, function () {
+            console.log('hover leave');
         });
         
     </script>
