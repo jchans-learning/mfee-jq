@@ -44,7 +44,8 @@
       $(window).scroll(function () {
         console.log("scrollTop", $(this).scrollTop());
         let progressPercent =
-          ($(this).scrollTop() / $(window).height() / 2) * 100 + "%";
+          ($(this).scrollTop() / $(window).height()) * 100 + "%";
+        //   ($(this).scrollTop() / $("body").height()) * 100 + "%";
         console.log(progressPercent);
         $(".progressBar").css("width", progressPercent);
       });
