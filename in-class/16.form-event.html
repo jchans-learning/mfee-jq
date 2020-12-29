@@ -48,6 +48,10 @@
       $(":text").change(function () {
         console.log("change");
       });
+
+      $(":text").change(function () {
+        console.log("change", $(this).val());
+      });
     </script>
   </body>
 </html>
