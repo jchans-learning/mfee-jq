@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Progress Bar</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <style>
+      body {
+        height: 300vh;
+      }
+
+      .wrap {
+        background-color: #000;
+        width: 100%;
+        height: 20px;
+        position: fixed;
+      }
+
+      .progressBar {
+        background-color: pink;
+        width: 0;
+        height: 20px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="wrap">
+      <div class="progressBar"></div>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.js"
+      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $(window).scroll(function () {
+        console.log("scrollTop", $(this).scrollTop());
+        let progressPercent =
+          ($(this).scrollTop() / $(window).height() / 2) * 100 + "%";
+        console.log(progressPercent);
+        $(".progressBar").css("width", progressPercent);
+      });
+    </script>
+  </body>
+</html>
