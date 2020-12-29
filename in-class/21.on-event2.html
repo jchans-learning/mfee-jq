@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>On Event</title>
+    <title>On Event 2</title>
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
@@ -15,15 +15,8 @@
   <body>
     <div class="container">
       <div class="row">
-        <div class="col-2">
-          <button id="add" class="btn btn-primary">add</button>
-        </div>
-        <div class="col">
-          <ul>
-            <li>item 1</li>
-            <li>item 2</li>
-          </ul>
-        </div>
+        <button id="on" class="btn btn-primary">button</button>
+        <p id="showAction"></p>
       </div>
     </div>
 
@@ -33,14 +26,16 @@
       crossorigin="anonymous"
     ></script>
     <script>
-      $("#add").on("click", function () {
-        let itemNumber = $("ul li").length + 1;
-        let newItemHtml = "<li>Item " + itemNumber + "</li>";
-        $("ul").append(newItemHtml);
-      });
-
-      $("ul").on("click", "li", function () {
-        $(this).css("background", "red");
+      $("#on").on({
+        mouseenter: function () {
+          $("#showAction").text("Mouse Enter");
+        },
+        click: function () {
+          $("#showAction").text("Click");
+        },
+        dblclick: function () {
+          $("#showAction").text("Double Click");
+        },
       });
     </script>
   </body>
