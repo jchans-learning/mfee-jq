@@ -36,6 +36,18 @@
         event.preventDefault();
         console.log("hi", event);
       });
+
+      $(":text").focus(function () {
+        console.log("text focused");
+      });
+
+      $(":text").blur(function () {
+        console.log("blur");
+      });
+
+      $(":text").change(function () {
+        console.log("change");
+      });
     </script>
   </body>
 </html>
