@@ -13,6 +13,7 @@
     <style>
       body {
         height: 300vh;
+        transition: 0.5s;
       }
 
       .wrap {
@@ -44,10 +45,17 @@
       $(window).scroll(function () {
         console.log("scrollTop", $(this).scrollTop());
         let progressPercent =
-          ($(this).scrollTop() / $(window).height()) * 100 + "%";
-        //   ($(this).scrollTop() / $("body").height()) * 100 + "%";
+          ($(this).scrollTop() / ($("body").height() - $(window).height())) *
+            100 +
+          "%";
         console.log(progressPercent);
         $(".progressBar").css("width", progressPercent);
+
+        if ($(this).scrollTop() > 750) {
+          $("body").css("background", "orange");
+        } else {
+          $("body").css("background", "none");
+        }
       });
     </script>
   </body>
