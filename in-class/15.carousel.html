@@ -82,9 +82,14 @@
 
             // 移動圖片，改 .img-warp left -800px
             $('.img-warp').css('left', -800 * index);
-            
-
         });
+
+        setInterval(function(){
+            if(index > 4) index = 0;
+            $('.slider-dots li').eq(index).css('background', '#fff').siblings().css('background', 'none');
+            $('.img-warp').css('left', -800 * index);   
+            index++;
+        }, 3000);
     </script>
 </body>
 
