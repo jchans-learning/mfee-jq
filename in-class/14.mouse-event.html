@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Event</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <br><br>
+
+                <button class="btn btn-primary mtbtn1">
+                    click
+                </button><br><br>
+                
+                <button class="btn btn-info mtbtn2">
+                    double click
+                </button><br><br>
+
+                <button class="btn btn-warning mtbtn3">
+                    contextmenu
+                </button><br><br>
+                
+                <button class="btn btn-danger mtbtn4">
+                    mousedown
+                </button><br><br>
+
+                <button class="btn btn-success mtbtn5">
+                    mouseup
+                </button>
+    
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script>
+        $('.mtbtn1').click(function () {
+            console.log('clicked');
+        });
+
+        $('.mtbtn2').dblclick(function () {
+            console.log('dbl clicked');
+        });
+
+        $('.mtbtn3').contextmenu(function () {
+            console.log('contextmenu');
+        });
+
+        $('.mtbtn4').mousedown(function () {
+            console.log('mousedown');
+        });
+
+        $('.mtbtn5').mouseup(function () {
+            console.log('mouseup');
+        });
+
+        
+    </script>
+</body>
+
+</html>
