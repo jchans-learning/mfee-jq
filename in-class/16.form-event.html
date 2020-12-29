@@ -31,6 +31,7 @@
       crossorigin="anonymous"
     ></script>
     <script>
+      // 把監聽 submit 的部分寫在 script
       $("form").submit(function (event) {
         event.preventDefault();
         console.log("hi", event);
