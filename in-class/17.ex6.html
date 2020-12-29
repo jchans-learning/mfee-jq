@@ -52,6 +52,21 @@
       //   $("#district option").each(function (params) {
       //     $(this).html("123");
       //   });
+
+      $("#city").change(function () {
+        console.log("city change", $(this).val());
+        console.log("city change", districtObj[$(this).val()]);
+        let cityIndex = $(this).val();
+
+        $("#district option").each(function () {
+          $(this).html(districtObj[cityIndex][$(this).val()]);
+        });
+
+        // 待處理
+        //   for (let i = 0; i < array.length; i++) {
+        //       const element = array[i];
+        //   }
+      });
     </script>
   </body>
 </html>
