@@ -16,9 +16,9 @@
     <div class="container">
       <div class="row">
         <div class="">
-          <button class="btn btn-primary" id="btnHi">Hi</button>
+          <button class="btn btn-info" id="btnHi">Hi</button>
           <button class="btn btn-primary" id="on">on</button>
-          <button class="btn btn-primary" id="off">off</button>
+          <button class="btn btn-danger" id="off">off</button>
         </div>
       </div>
     </div>
@@ -34,7 +34,7 @@
       };
 
       $("#on").on("click", function () {
-        $("#btnHi").on("click", sayHi);
+        $("#btnHi").on("click mouseenter", sayHi);
         console.log("Hi button is on!");
       });
 
