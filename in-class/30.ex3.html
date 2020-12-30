@@ -12,8 +12,10 @@
     />
     <style>
       .box {
-        height: 100px;
+        height: 200px;
         width: 100px;
+        margin: 10px;
+        border-radius: 50%;
       }
     </style>
   </head>
@@ -21,11 +23,11 @@
   <body>
     <div class="container">
       <div class="row">
-        <div class="box autobg">box 1</div>
-        <div class="box autobg">box 2</div>
-        <div class="box autobg">box 3</div>
-        <div class="box autobg">box 4</div>
-        <div class="box autobg">box 5</div>
+        <div class="col box autobg">box 1</div>
+        <div class="col box autobg">box 2</div>
+        <div class="col box autobg">box 3</div>
+        <div class="col box autobg">box 4</div>
+        <div class="col box autobg">box 5</div>
       </div>
     </div>
 
@@ -36,8 +38,8 @@
     ></script>
     <script>
       $(".box").on("click", function () {
-        $(".box").css("border", "none");
-        $(this).css("border", "5px solid black");
+        $(".box").css("box-shadow", "none");
+        $(this).css("box-shadow", "0 0 10px #000");
       });
     </script>
     <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
