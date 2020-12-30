@@ -67,39 +67,38 @@
       crossorigin="anonymous"
     ></script>
     <script>
-        $("#right").on("click", function () {
-          $("#player").css("left", "+=100");
-        });
-        $("#left").on("click", function () {
-          $("#player").css("left", "-=100");
-        });
-        $("#up").on("click", function () {
-          $("#player").css("top", "-=100");
-        });
-        $("#down").on("click", function () {
-          $("#player").css("top", "+=100");
-        });
+      $("#right").on("click", function () {
+        $("#player").css("left", "+=100");
+      });
+      $("#left").on("click", function () {
+        $("#player").css("left", "-=100");
+      });
+      $("#up").on("click", function () {
+        $("#player").css("top", "-=100");
+      });
+      $("#down").on("click", function () {
+        $("#player").css("top", "+=100");
+      });
 
-        $(document).keydown(function () {
-          console.log("Hello", event.which);
-          if (event.which == 39) {
-            // Move Right
-            $("#player").css("left", "+=100");
-          }
-          if (event.which == 37) {
-            // Move Left
-            $("#player").css("left", "-=100");
-          }
-          if (event.which == 38) {
-            // Move up
-            $("#player").css("top", "-=100");
-          }
-          if (event.which == 40) {
-            // Move down
-            $("#player").css("top", "+=100");
-          }
-        });
-      `
+      $(document).keydown(function () {
+        console.log("Hello", event.which);
+        if (event.which == 39) {
+          // Move Right
+          $("#player").css("left", "+=100");
+        }
+        if (event.which == 37) {
+          // Move Left
+          $("#player").css("left", "-=100");
+        }
+        if (event.which == 38) {
+          // Move up
+          $("#player").css("top", "-=100");
+        }
+        if (event.which == 40) {
+          // Move down
+          $("#player").css("top", "+=100");
+        }
+      });
     </script>
   </body>
 </html>
