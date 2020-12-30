@@ -80,7 +80,9 @@
         $("#player").css("top", "+=100");
       });
 
-      // $(document).keypress(function);
+      $(document).keydown(function () {
+        console.log("Hello", event.which);
+      });
     </script>
   </body>
 </html>
