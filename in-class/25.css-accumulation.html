@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CSS Style</title>
+    <title>CSS Accumulation</title>
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
@@ -11,7 +11,6 @@
       crossorigin="anonymous"
     />
     <style>
-      /* CSSOM */
       .box {
         width: 200px;
         height: 200px;
@@ -22,13 +21,10 @@
   </head>
 
   <body>
-    <!-- DOM -->
     <div class="container">
       <div class="row">
-        <div class="wrap">
-          <button class="btn btn-primary mr-2" id="get">get CSS</button>
-          <button class="btn btn-primary" id="set">set CSS</button>
-          <div class="box mt-2">123</div>
+        <div class="col">
+          <div class="box"></div>
         </div>
       </div>
     </div>
@@ -39,22 +35,9 @@
       crossorigin="anonymous"
     ></script>
     <script>
-      $("#get").on("click", function () {
-        let bgColor = $(".box").css("background-color");
-        console.log("bgColor:", bgColor);
-        console.log("bgColor type:", typeof bgColor);
+      $(".box").on("click", function () {
+        $(this).css("width", "+=300");
       });
-
-      $("#set").on("click", function () {
-        $(".box").css("background-color", "lightpink");
-      });
-
-      let cssStyle = {
-        color: "#fff",
-        background: "#000",
-      };
-
-      // $(".box").css(cssStyle);
     </script>
   </body>
 </html>
