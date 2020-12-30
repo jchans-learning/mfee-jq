@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Style</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <style>
+      .box {
+        width: 200px;
+        height: 200px;
+        background-color: #afa;
+        transition: 0.5s;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="wrap">
+          <button class="btn btn-primary mr-2" id="get">get CSS</button>
+          <button class="btn btn-primary" id="set">set CSS</button>
+          <div class="box mt-2"></div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.js"
+      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $("#get").on("click", function () {
+        let bgColor = $(".box").css("background-color");
+        console.log("bgColor:", bgColor);
+        console.log("bgColor type:", typeof bgColor);
+      });
+
+      $("#set").on("click", function () {
+        $(".box").css("background-color", "lightpink");
+      });
+    </script>
+  </body>
+</html>
