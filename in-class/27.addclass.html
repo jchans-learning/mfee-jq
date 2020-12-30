@@ -15,6 +15,7 @@
         width: 300px;
         height: 300px;
         background-color: #ccc;
+        transition: 1s;
       }
 
       .active {
@@ -30,6 +31,7 @@
           <button id="addClass">add Class</button>
           <button id="removeClass">remove Class</button>
           <button id="checkClass">check Class</button>
+          <button id="toggleClass">toggle Class</button>
 
           <span></span>
 
@@ -46,6 +48,18 @@
     <script>
       $("#addClass").on("click", function () {
         $(".box").addClass("active");
+      });
+
+      $("#removeClass").on("click", function () {
+        $(".box").removeClass("active");
+      });
+
+      $("#checkClass").on("click", function () {
+        $("span").text($(".box").hasClass("active"));
+      });
+
+      $("#toggleClass").on("click", function () {
+        $(".box").toggleClass("active");
       });
     </script>
   </body>
