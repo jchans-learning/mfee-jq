@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ex8</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+      integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp"
+      crossorigin="anonymous"
+    />
+    <style>
+      .wrap {
+        width: 800px;
+        height: 400px;
+        background-color: #eee;
+      }
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: lightblue;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: 0.1s;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="wrap position-relative mx-auto mt-2">
+      <div id="player" class="box position-absolute"></div>
+    </div>
+
+    <div class="text-center py-3">
+      <div class="py-1">
+        <button id="up" class="btn btn-info">
+          <i class="fas fa-caret-up"></i>
+        </button>
+      </div>
+      <div>
+        <button id="left" class="btn btn-info mx-3">
+          <i class="fas fa-caret-left"></i>
+        </button>
+        <button id="right" class="btn btn-info mx-3">
+          <i class="fas fa-caret-right"></i>
+        </button>
+      </div>
+      <div class="py-1">
+        <button id="down" class="btn btn-info">
+          <i class="fas fa-caret-down"></i>
+        </button>
+      </div>
+      <div></div>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.js"
+      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $("#right").on("click", function () {
+        $("#player").css("left", "+=100");
+      });
+      $("#left").on("click", function () {
+        $("#player").css("left", "-=100");
+      });
+      $("#up").on("click", function () {
+        $("#player").css("top", "-=100");
+      });
+      $("#down").on("click", function () {
+        $("#player").css("top", "+=100");
+      });
+
+      // $(document).keypress(function);
+    </script>
+  </body>
+</html>
