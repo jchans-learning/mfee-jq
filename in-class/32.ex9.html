@@ -10,6 +10,19 @@
       integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
       crossorigin="anonymous"
     />
+    <style>
+      .fontS {
+        font-size: 0.8rem;
+      }
+
+      .fontM {
+        font-size: 1rem;
+      }
+
+      .fontL {
+        font-size: 1.2rem;
+      }
+    </style>
   </head>
 
   <body>
@@ -21,6 +34,21 @@
           <div class="btn btn-info">L</div>
         </div>
       </div>
+      <h2>jQuery</h2>
+      <article>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. In pariatur
+          dicta assumenda distinctio beatae non accusamus quia explicabo.
+          Ratione, et eaque. Aperiam, nobis enim non porro consequatur dolorum
+          in quibusdam.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus
+          itaque nostrum velit et quas, nobis inventore sapiente incidunt atque?
+          Non provident consequuntur expedita, ipsam eveniet fuga voluptatibus
+          accusantium modi excepturi?
+        </p>
+      </article>
     </div>
 
     <script
@@ -29,7 +57,23 @@
       crossorigin="anonymous"
     ></script>
     <script>
-      jq;
+      $(".btn").on("click", function () {
+        console.log($(this).is(':contains("S")'));
+
+        $("article").removeClass();
+        $(".btn").removeClass("active");
+        $(this).addClass("active");
+
+        if ($(this).is(':contains("S")')) {
+          $("article").addClass("fontS");
+        }
+        if ($(this).is(':contains("M")')) {
+          $("article").addClass("fontM");
+        }
+        if ($(this).is(':contains("L")')) {
+          $("article").addClass("fontL");
+        }
+      });
     </script>
   </body>
 </html>
