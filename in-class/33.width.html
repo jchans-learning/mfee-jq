@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Width</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <style>
+      .box {
+        width: 200px;
+        height: 200px;
+        padding: 20px 40px;
+        margin: 10px 20px;
+        background-color: #ccc;
+        border: 5px solid #000;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="box"></div>
+      </div>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.js"
+      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      console.log("width:", $(".box").width());
+      console.log("height:", $(".box").height());
+
+      console.log("width:", $(".box").innerWidth());
+      console.log("height:", $(".box").innerHeight());
+
+      console.log("width:", $(".box").outerWidth());
+      console.log("height:", $(".box").outerHeight());
+
+      console.log("width:", $(".box").outerWidth(true));
+      console.log("height:", $(".box").outerHeight(true));
+    </script>
+  </body>
+</html>
