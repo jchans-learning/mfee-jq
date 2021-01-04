@@ -4,18 +4,86 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SVG animation</title>
+    <style>
+      .wrap {
+      }
+      .circle {
+        /* 2piR = 1194 完整的圓*/
+        stroke-dasharray: 1194;
+        stroke-dashoffset: 1194;
+      }
+
+      .circle.active {
+        animation: circle 1s ease-in-out;
+        animation-fill-mode: forwards;
+      }
+
+      .tick {
+        stroke-dasharray: 350;
+        stroke-dashoffset: 350;
+      }
+
+      .tick.active {
+        animation: tick 0.8s ease-in-out;
+        animation-fill-mode: forwards;
+        animation-delay: 0.8s;
+      }
+
+      @keyframes circle {
+        from {
+          stroke-dashoffset: 1194;
+        }
+        to {
+          stroke-dashoffset: 2388;
+        }
+      }
+
+      @keyframes tick {
+        from {
+          stroke-dashoffset: 350;
+        }
+        to {
+          stroke-dashoffset: 0;
+        }
+      }
+    </style>
   </head>
   <body>
+    <button>click</button>
     <svg width="400" height="400">
       <circle
         cx="200"
         cy="200"
-        r="180"
+        r="190"
         stroke-width="20"
         stroke="green"
+        stroke-linecap="round"
+        stroke-linejoin="round"
         fill="none"
         style="color: aqua"
+        class="circle"
+        transform="rotate(-90 200 200)"
+      />
+      <polyline
+        fill="none"
+        stroke="green"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="24"
+        points="88, 214 173, 284 304, 138"
+        class="tick"
       />
     </svg>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.js"
+      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $("button").on("click", function () {
+        $(".circle").toggleClass("active");
+        $(".tick").toggleClass("active");
+      });
+    </script>
   </body>
 </html>
