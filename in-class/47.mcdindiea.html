@@ -17,11 +17,22 @@
     <style>
       body {
         height: 200vh;
+        cursor: url(../imgs/mc-cursor-2.png), auto;
       }
 
       .banner-left {
         height: 100vh;
         background-color: yellow;
+      }
+
+      .banner-text-area {
+        margin-left: 40px;
+        transform: translateY(200px);
+        transition: 1s ease-out;
+      }
+
+      .banner-text-area.move-up {
+        transform: translateY(-100px);
       }
 
       p {
@@ -36,6 +47,11 @@
         -webkit-text-stroke-width: 2px;
         -webkit-text-stroke-color: red;
       }
+
+      .banner-slider-area {
+        height: 100vh;
+        background-image: url(../imgs/home-ff-slide-1-new.jpg);
+      }
     </style>
   </head>
 
@@ -49,6 +65,7 @@
             <p>Returns</p>
           </div>
         </div>
+        <div class="banner-slider-area col-8"></div>
       </div>
     </div>
 
@@ -67,5 +84,24 @@
       integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
       crossorigin="anonymous"
     ></script>
+    <script>
+      $(window).on("scroll", function () {
+        console.log("scroll", $(this).scrollTop());
+        let scrollTop = $(this).scrollTop();
+
+        // if (scrollTop > 0) {
+        //   $(".banner-text-area").addClass("move-up");
+        // } else {
+        //   $(".banner-text-area").removeClass("move-up");
+        // }
+
+        $(".banner-text-area").css(
+          "transform",
+          "translateY(-" + scrollTop + "px)"
+        );
+      });
+
+      let scrollTop = thisw;
+    </script>
   </body>
 </html>
