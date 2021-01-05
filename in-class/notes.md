@@ -6,4 +6,12 @@ Express 做 server
 localhost
 port
 
-今天講 node 套件
+今天講 node 套件，試做簡單爬蟲
+
+React 很常用的用法
+
+```
+const { JSDOM } = require( "jsdom" );
+const { window } = new JSDOM( "" );
+const $ = require( "jquery" )( window );
+```
