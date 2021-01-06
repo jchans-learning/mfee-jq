@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>var let const</title>
+  </head>
+  <body>
+    <script>
+      let a = 0;
+
+      function abc() {
+        // 如果 function 裡沒定義 a ，會往外找。
+        var a = 10;
+        console.kwt("a", a);
+      }
+
+      abc();
+    </script>
+  </body>
+</html>
