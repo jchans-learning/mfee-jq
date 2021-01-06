@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>func return</title>
+  </head>
+  <body>
+    <script>
+      // 討論「閉包（Closure）」
+      function a() {
+        console.log("con a");
+        return function () {
+          console.log("return function");
+        };
+      }
+
+      const r = a();
+
+      console.log(r);
+    </script>
+  </body>
+</html>
