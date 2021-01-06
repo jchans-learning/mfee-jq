@@ -10,8 +10,10 @@
       // 討論「閉包（Closure）」
       function a() {
         console.log("con a");
-        return function () {
-          console.log("return function");
+        let x = 10;
+        return function (num) {
+          x--;
+          console.log("return x", x * num);
         };
       }
 
